@@ -3,7 +3,6 @@
 - Raw rows: **100,978**
 - Clean rows: **100,155** (99.18% of raw)
 - Quarantined rows: **521** (see `data/processed/quarantine.csv`)
-- Runtime: 0.8 s
 
 | Check | Rows flagged | Action |
 |---|---:|---|

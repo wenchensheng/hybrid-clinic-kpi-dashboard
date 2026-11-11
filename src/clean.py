@@ -104,7 +104,7 @@ def write_report(n_raw, n_clean, n_quar, checks, secs):
     lines = ["# Data quality report (synthetic appointment extract)", "",
              f"- Raw rows: **{n_raw:,}**", f"- Clean rows: **{n_clean:,}** ({n_clean / n_raw:.2%} of raw)",
              f"- Quarantined rows: **{n_quar:,}** (see `data/processed/quarantine.csv`)",
-             f"- Runtime: {secs:.1f} s", "", "| Check | Rows flagged | Action |", "|---|---:|---|"]
+             "", "| Check | Rows flagged | Action |", "|---|---:|---|"]
     lines += [f"| {c} | {k:,} | {a} |" for c, k, a in checks]
     lines += ["", "_Defects were injected on purpose by `src/generate_synthetic.py` to exercise these checks._", ""]
     REPORT.write_text("\n".join(lines))
