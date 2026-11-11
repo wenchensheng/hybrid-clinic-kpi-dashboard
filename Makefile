@@ -20,4 +20,4 @@ screenshots:    ## headless-browser check + screenshots (needs requirements-dev.
 	$(PY) scripts/screenshot.py $(if $(CHROME),--chrome $(CHROME),)
 
 clean:
-	rm -rf data/raw/*.csv data/processed reports/kpi
+	rm -f data/raw/*.csv data/processed/*.csv data/processed/*.db
