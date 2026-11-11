@@ -1,0 +1,11 @@
+rurality,age_band,completed_video_scheduled,fallback_rate
+Rural,0-17,389,0.1234
+Rural,18-44,832,0.1454
+Rural,45-64,1132,0.1449
+Rural,65-74,857,0.1284
+Rural,75+,500,0.194
+Urban,0-17,1088,0.0616
+Urban,18-44,2531,0.0672
+Urban,45-64,3387,0.0617
+Urban,65-74,2579,0.0648
+Urban,75+,1882,0.1217

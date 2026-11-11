@@ -1,0 +1,5 @@
+modality_delivered,path,claims,denial_rate,avg_charge,denied_charges
+audio,video→audio fallback,1382,0.2055,86.08,24507.0
+audio,as scheduled,7615,0.1094,85.81,71362.0
+video,as scheduled,13795,0.0733,131.71,133279.0
+in_person,as scheduled,57428,0.0562,156.38,504139.0

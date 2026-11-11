@@ -1,0 +1,4 @@
+modality_scheduled,scheduled,completion_rate,cancel_rate,no_show_rate
+in_person,73744,0.7787,0.0745,0.1586
+video,17697,0.8576,0.0611,0.0865
+audio,8714,0.8739,0.0586,0.0717

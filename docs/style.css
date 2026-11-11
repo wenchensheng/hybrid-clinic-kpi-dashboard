@@ -1,0 +1,50 @@
+:root {
+  --navy: #0b3954; --teal: #087e8b; --sky: #5fb3c9; --coral: #e4572e; --amber: #f2a541;
+  --bg: #f4f7f9; --card: #ffffff; --ink: #1f2d3a; --muted: #5c6b78; --line: #dde5ea;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+       background: var(--bg); color: var(--ink); font-size: 14px; line-height: 1.45; }
+.wrap { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
+.topbar { background: linear-gradient(90deg, var(--navy), var(--teal)); color: #fff; padding: 18px 0; }
+.topbar .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.topbar h1 { margin: 0; font-size: 24px; font-weight: 650; letter-spacing: .2px; }
+.topbar .sub { margin: 4px 0 0; opacity: .9; }
+.badge { background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.5); border-radius: 999px;
+         padding: 5px 12px; font-weight: 600; white-space: nowrap; }
+.filters { display: flex; flex-wrap: wrap; gap: 14px 22px; align-items: flex-end; background: var(--card);
+           margin-top: -1px; padding-top: 14px; padding-bottom: 14px; border-bottom: 1px solid var(--line);
+           position: sticky; top: 0; z-index: 5; max-width: none; box-shadow: 0 2px 6px rgba(11,57,84,.06); }
+.filters > * { flex: 0 0 auto; }
+.filters label { display: flex; flex-direction: column; font-size: 12px; color: var(--muted); font-weight: 600; gap: 4px; }
+.filters select { font-size: 14px; padding: 6px 8px; border: 1px solid var(--line); border-radius: 6px; min-width: 120px; background: #fff; }
+.filters fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+.filters legend { font-size: 12px; color: var(--muted); font-weight: 600; padding: 0; margin-bottom: 4px; }
+.filters .chk { display: inline-flex; flex-direction: row; align-items: center; gap: 5px; margin-right: 12px; padding: 6px 0;
+                color: var(--ink); font-size: 14px; font-weight: 500; white-space: nowrap; }
+.filters button { padding: 7px 14px; border: 1px solid var(--teal); color: var(--teal); background: #fff; border-radius: 6px; cursor: pointer; font-weight: 600; }
+.filters button:hover { background: var(--teal); color: #fff; }
+main { padding-top: 18px; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(132px, 1fr)); gap: 12px; }
+.kpi { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--teal); border-radius: 8px; padding: 12px 14px; }
+.kpi.warn { border-left-color: var(--coral); }
+.kpi .label { color: var(--muted); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .4px; }
+.kpi .value { font-size: 22px; font-weight: 700; color: var(--navy); margin-top: 4px; }
+.kpi .ctx { font-size: 12px; color: var(--muted); }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 14px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px 8px; }
+.card.wide { grid-column: 1 / -1; }
+.card h2 { font-size: 16px; margin: 0; color: var(--navy); }
+.hint { color: var(--muted); margin: 2px 0 4px; font-size: 12.5px; }
+.chart { width: 100%; height: 320px; }
+.note { color: var(--muted); font-size: 12.5px; margin: 4px 0 8px; }
+.actions { margin-top: 14px; padding-bottom: 16px; }
+.findings { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; margin-top: 10px; }
+.finding { border: 1px solid var(--line); border-top: 3px solid var(--amber); border-radius: 8px; padding: 10px 12px; background: #fffdf8; }
+.finding h3 { margin: 0 0 6px; font-size: 14px; color: var(--navy); }
+.finding p { margin: 0 0 6px; font-size: 13px; }
+.finding .act { color: var(--teal); font-weight: 600; }
+.foot { color: var(--muted); font-size: 12.5px; padding-top: 18px; padding-bottom: 28px; }
+.foot a { color: var(--teal); }
+@media (max-width: 860px) { .grid { grid-template-columns: 1fr; } .topbar .wrap { flex-direction: column; align-items: flex-start; } }
+@media (min-width: 1180px) { .kpis { grid-template-columns: repeat(9, minmax(0, 1fr)); } }

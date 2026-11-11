@@ -1,0 +1,7 @@
+clinic_id,clinic_name,setting,scheduled,no_show_rate,avg_lead_days,virtual_share,denial_rate,gross_charges
+C05,Riverbend Primary Care,Suburban,15654,0.2021,17.6,0.2322,0.0936,1682216.0
+C06,Cedar Ridge Family Health,Rural,16896,0.1349,11.2,0.2816,0.063,1926277.0
+C04,Pine Hollow Community Health,Rural,16716,0.1319,11.1,0.2903,0.065,1919069.0
+C02,Maple Grove Primary Care,Suburban,16848,0.1289,9.9,0.2667,0.0635,1976120.0
+C01,Harborside Family Medicine,Urban,17100,0.1197,9.7,0.3032,0.0595,2047220.0
+C03,Eastbrook Internal Medicine,Urban,16941,0.1162,9.6,0.3214,0.0604,2018763.0

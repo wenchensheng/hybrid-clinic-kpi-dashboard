@@ -1,0 +1,13 @@
+modality_delivered,path,visit_type,completed_virtual,inperson_within_14d
+audio,as scheduled,acute,2122,0.2531
+audio,as scheduled,chronic_followup,5004,0.1631
+audio,as scheduled,new_patient,333,0.1471
+audio,as scheduled,preventive,156,0.1346
+audio,video→audio fallback,acute,398,0.2789
+audio,video→audio fallback,chronic_followup,882,0.2245
+audio,video→audio fallback,new_patient,62,0.2419
+audio,video→audio fallback,preventive,40,0.2
+video,as scheduled,acute,3841,0.1757
+video,as scheduled,chronic_followup,9004,0.0891
+video,as scheduled,new_patient,607,0.0741
+video,as scheduled,preventive,343,0.105

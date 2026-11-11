@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hybrid Clinic KPI Dashboard · Virtual vs In-Person Primary Care</title>
+  <meta name="description" content="Interactive KPI dashboard comparing video, audio-only and in-person primary care visits across a synthetic six-clinic network, with CMS Medicare telehealth context.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Crect width=%2216%22 height=%2216%22 rx=%223%22 fill=%22%23087e8b%22/%3E%3Cpath d=%22M7 3h2v4h4v2H9v4H7V9H3V7h4z%22 fill=%22white%22/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <div>
+        <h1>Hybrid Clinic KPI Dashboard</h1>
+        <p class="sub">Virtual (video &amp; audio-only) vs in-person care across a six-clinic primary care network · Jan 2024 – Dec 2025</p>
+      </div>
+      <span class="badge" title="Clinic data is simulated by src/generate_synthetic.py">Synthetic data</span>
+    </div>
+  </header>
+
+  <section class="filters wrap" aria-label="Filters">
+    <label>Clinic
+      <select id="f-clinic"><option value="ALL">All clinics</option></select>
+    </label>
+    <fieldset>
+      <legend>Modality (scheduled)</legend>
+      <label class="chk"><input type="checkbox" name="mod" value="in_person" checked> In-person</label>
+      <label class="chk"><input type="checkbox" name="mod" value="video" checked> Video</label>
+      <label class="chk"><input type="checkbox" name="mod" value="audio" checked> Audio-only</label>
+    </fieldset>
+    <label>From <select id="f-from"></select></label>
+    <label>To <select id="f-to"></select></label>
+    <button id="f-reset" type="button">Reset</button>
+  </section>
+
+  <main class="wrap">
+    <section class="kpis" id="kpis" aria-label="Key performance indicators"></section>
+
+    <section class="grid">
+      <article class="card wide"><h2>Monthly completed visits by delivered modality</h2>
+        <p class="hint">Bars = visits; line = virtual share of completed visits (right axis).</p>
+        <div id="c-volume" class="chart"></div></article>
+      <article class="card"><h2>No-show rate by modality</h2>
+        <p class="hint">No-shows ÷ (completed + no-shows).</p>
+        <div id="c-noshow" class="chart"></div></article>
+      <article class="card"><h2>Clinic comparison</h2>
+        <p class="hint">No-show rate and average days to appointment (non-acute). Selected clinic highlighted.</p>
+        <div id="c-clinic" class="chart"></div></article>
+      <article class="card"><h2>Equity: rural vs urban, by age</h2>
+        <p class="hint">Audio-only share of virtual visits and video→audio fallback rate.</p>
+        <div id="c-equity" class="chart"></div></article>
+      <article class="card"><h2>Revenue integrity: claim denial rate</h2>
+        <p class="hint">By delivered modality; video visits that fell back to audio shown separately.</p>
+        <div id="c-denial" class="chart"></div></article>
+      <article class="card wide"><h2>Provider utilization</h2>
+        <p class="hint">Completed visits ÷ bookable slots (clinic &amp; month filters apply; all modalities). Dashed line = network average.</p>
+        <div id="c-util" class="chart"></div></article>
+      <article class="card wide cms"><h2>National context · CMS Medicare Telehealth Trends</h2>
+        <p class="hint">Share of telehealth-eligible Medicare beneficiaries who used telehealth in each quarter (public CMS data). Note: a different metric from this network's share of visits.</p>
+        <div id="c-cms" class="chart"></div>
+        <p class="note" id="cms-note"></p></article>
+    </section>
+
+    <section class="card actions" aria-label="Where managers should act">
+      <h2>Where clinic managers should act</h2>
+      <p class="hint">Network-wide findings computed from the full synthetic dataset (see notebooks/analysis.ipynb).</p>
+      <div id="findings" class="findings"></div>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <p><strong>Data:</strong> clinic, provider, patient and visit records are <strong>synthetic</strong> (seeded generator, no real patients or organizations).
+      National context from <a href="https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-medicaid-service-type-reports/medicare-telehealth-trends" target="_blank" rel="noopener">CMS Medicare Telehealth Trends</a>.</p>
+    <p>Built by Chensheng Wen · <a href="https://github.com/wenchensheng/hybrid-clinic-kpi-dashboard">Source on GitHub</a></p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+clinic_id,clinic_name,modality_scheduled,appointments,avg_lead_days,median_lead_days,share_over_14_days
+C01,Harborside Family Medicine,audio,798,3.9,3,0.0075
+C01,Harborside Family Medicine,in_person,9288,14.6,12,0.4015
+C01,Harborside Family Medicine,video,2769,5.1,4,0.0213
+C02,Maple Grove Primary Care,audio,933,3.7,3,0.0021
+C02,Maple Grove Primary Care,in_person,9660,14.4,12,0.4008
+C02,Maple Grove Primary Care,video,2100,5.1,4,0.0248
+C03,Eastbrook Internal Medicine,audio,812,3.9,3,0.0049
+C03,Eastbrook Internal Medicine,in_person,8964,14.6,12,0.4045
+C03,Eastbrook Internal Medicine,video,2896,5.2,4,0.0224
+C04,Pine Hollow Community Health,audio,1494,4.6,4,0.012
+C04,Pine Hollow Community Health,in_person,9409,16.4,13,0.4573
+C04,Pine Hollow Community Health,video,1675,5.9,5,0.0382
+C05,Riverbend Primary Care,audio,761,4.8,4,0.0171
+C05,Riverbend Primary Care,in_person,9430,25.4,21,0.6778
+C05,Riverbend Primary Care,video,1648,6.8,6,0.0795
+C06,Cedar Ridge Family Health,audio,1502,4.5,4,0.01
+C06,Cedar Ridge Family Health,in_person,9536,16.5,14,0.4674
+C06,Cedar Ridge Family Health,video,1670,6.0,5,0.0455
