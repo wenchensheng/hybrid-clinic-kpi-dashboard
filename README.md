@@ -31,6 +31,19 @@ Virtual share of completed visits rose from **26.8%** (2024) to **30.1%** (2025)
 ![Filtered dashboard](images/dashboard_filtered_riverbend.png)
 </details>
 
+## Tableau companion workbook
+
+The same KPI cube is also published as a Tableau workbook design, so the
+findings can be rebuilt in Tableau Desktop without touching the pipeline.
+The workbook connects directly to this repo's committed outputs — the nine
+KPI result tables in [`reports/kpi/`](reports/kpi) and the tidy CMS subset
+in [`data/external/cms_telehealth_national.csv`](data/external/cms_telehealth_national.csv)
+— and mirrors the five findings above as five worksheets plus a KPI
+overview dashboard, using the exact definitions in
+[KPI definitions](#kpi-definitions) as calculated fields. The full sheet
+spec, field list and calculated-field formulas are documented in
+[`tableau/README.md`](tableau/README.md).
+
 ## Data
 | Source | What | Where |
 |---|---|---|
@@ -92,6 +105,7 @@ hybrid-clinic-kpi-dashboard/
 ├── notebooks/analysis.ipynb    # executed, charts render on GitHub
 ├── reports/  data_quality_report.md  kpi/*.csv
 ├── docs/                       # GitHub Pages: index.html, app.js, style.css, data/dashboard.json
+├── tableau/                    # Tableau companion workbook: build spec, connections, calculated fields
 ├── images/                     # dashboard screenshots
 ├── scripts/screenshot.py       # headless check: no JS errors + screenshots
 └── tests/test_pipeline.py
